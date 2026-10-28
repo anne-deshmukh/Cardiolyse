@@ -10,3 +10,13 @@ which only the group can fill in truthfully.
 
 English summary: the tool was used to find and structure public sources, cite facts, and list
 unknowns and questions mapped to the template sections. It did not write the assignment text.
+
+## Session log (for the group's own record)
+
+| Date | Session | What the AI tool did | What it did **not** do |
+|---|---|---|---|
+| 2026-10-28 | 1 | Built the source inventory from web-search summaries, the template outlines and a first question list. Could not open web pages (network policy). | No facts verified; no assignment text. |
+| 2026-10-28 | 2 | Read the manufacturer's website (31 pages) and the 2019 IFU directly; queried EUDAMED and NANDO; read EC/MDCG guidance and Finlex; wrote the knowledge files with source IDs; refined the question list with a status per question. Gave one unofficial working translation (Finnish → English) of 719/2021 §5, marked as such. | Did not read EUR-Lex (bot challenge) or any press, literature, patent or aggregator site (blocked). Did not write text for the templates. Did not decide the group's process selection or the classification conclusion. |
+
+Points the group should check itself before relying on this repository: every item marked
+*[not verified]* in `05_regulatory/mdr-pathway.md` §12, and every source with status `B`.

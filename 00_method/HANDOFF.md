@@ -102,3 +102,22 @@ the templates). Log the AI use in `00_method/ai-use-log.md` (draft row for *Liit
 - Patent US 10,512,412 B2 assigned to Cardiolyse Oy (inventors Chaykovskyy, Budnyk, Starynska).
 - NHS Digital Health Partnership Award (Mar 2022); OUH iCARE study (post-AF-ablation remote ECG).
 - 2025: MedicubeX partnership expansion (28 Aug), Vitals4Pets pet ECG (Jul) – veterinary use.
+
+## 8. Session 2 status (2026-10-28)
+
+Done: work-plan steps 1, 2 (EUDAMED, NANDO), 6 (partly), 7 and 8 – see README.md "Status".
+
+Still open, because the hosts were blocked in session 2:
+- EUR-Lex (L01–L03, L08, L14): answers with an empty HTTP 202 bot-challenge page. Getting
+  past the challenge was not attempted. Verify the articles listed in
+  `05_regulatory/mdr-pathway.md` §12 in a normal browser.
+- fimea.fi (L10): HTTP 403 from the Fimea server.
+- Not on the session allowlist: tietopalvelu.ytj.fi (R01), accessdata.fda.gov (R05),
+  pard.mhra.gov.uk (R06), pubmed.ncbi.nlm.nih.gov, patents.google.com, uspto.report,
+  researchgate.net, all press, partner and aggregator hosts (S04–S27),
+  ecg.cardiolyse.com, api.cardiolyse.com, clinicaltrials.gov.
+- dashboard.cardiolyse.com (S03): HTTP 502 from the upstream host.
+- L15 (Dec 2025 MDR targeted-revision proposal): not found on the reachable EC pages.
+
+Next steps when access allows: work-plan steps 3, 4 and 5; the R01, R05 and R06 queries;
+EUR-Lex verification; then update the question statuses.
