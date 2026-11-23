@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="880" viewBox="0 0 1000 880" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F3B63"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7A8F"/>
+    </marker>
+    <style>
+      .comp{fill:#E6EEF9;stroke:#2B5797;stroke-width:2}
+      .inner{fill:#FFFFFF;stroke:#2B5797;stroke-width:1.5}
+      .ext{fill:#FFFFFF;stroke:#6B7A8F;stroke-width:1.8;stroke-dasharray:6 4}
+      .t{font-size:17px;font-weight:bold;fill:#14263F;text-anchor:middle}
+      .s{font-size:13.5px;fill:#33475F;text-anchor:middle}
+      .lbl{font-size:12.5px;fill:#1F3B63}
+      .flow{stroke:#1F3B63;stroke-width:2;fill:none;marker-end:url(#a)}
+      .ctrl{stroke:#6B7A8F;stroke-width:1.6;fill:none;stroke-dasharray:5 4;marker-end:url(#g)}
+      .num{fill:#2B5797}
+      .numt{font-size:12px;font-weight:bold;fill:#FFFFFF;text-anchor:middle}
+    </style>
+  </defs>
+  <rect width="1000" height="880" fill="#FFFFFF"/>
+
+  <!-- system boundary -->
+  <rect x="30" y="40" width="690" height="800" rx="10" fill="#FAFBFD" stroke="#2B5797" stroke-width="1.5" stroke-dasharray="10 5"/>
+  <text x="50" y="68" font-size="15" font-weight="bold" fill="#2B5797">Cardiolyse – itsenäinen ohjelmisto (laite)</text>
+
+  <!-- REST API -->
+  <rect class="comp" x="110" y="95" width="360" height="110" rx="8"/>
+  <text class="t" x="290" y="140">REST-rajapinta (API)</text>
+  <text class="s" x="290" y="165">tallenteiden vastaanotto ja</text>
+  <text class="s" x="290" y="184">tulosten välitys</text>
+
+  <!-- Analysis pipeline -->
+  <rect class="comp" x="110" y="255" width="360" height="265" rx="8"/>
+  <text class="t" x="290" y="285">Analyysiputki</text>
+  <rect class="inner" x="140" y="305" width="300" height="48" rx="6"/>
+  <text class="s" x="290" y="334">signaalin laadun arviointi</text>
+  <rect class="inner" x="140" y="383" width="300" height="48" rx="6"/>
+  <text class="s" x="290" y="412">mittausalgoritmit</text>
+  <rect class="inner" x="140" y="461" width="300" height="48" rx="6"/>
+  <text class="s" x="290" y="490">lukitut syväoppimismallit</text>
+  <path class="flow" d="M290,353 V381"/>
+  <path class="flow" d="M290,431 V459"/>
+
+  <!-- Data store (cylinder) -->
+  <path class="comp" d="M110,590 a180,18 0 0,1 360,0 v82 a180,18 0 0,1 -360,0 z"/>
+  <path d="M110,590 a180,18 0 0,0 360,0" fill="none" stroke="#2B5797" stroke-width="2"/>
+  <text class="t" x="290" y="630">Tietovarasto</text>
+  <text class="s" x="290" y="652">tallenteet, tulokset, hyväksynnät,</text>
+  <text class="s" x="290" y="670">audit trail -loki</text>
+
+  <!-- ECG Workspace -->
+  <rect class="comp" x="110" y="725" width="360" height="90" rx="8"/>
+  <text class="t" x="290" y="762">ECG Workspace</text>
+  <text class="s" x="290" y="786">verkkokäyttöliittymä: tarkastelu,</text>
+  <text class="s" x="290" y="804">muokkaus ja hyväksyntä</text>
+
+  <!-- User management -->
+  <rect class="comp" x="505" y="395" width="190" height="100" rx="8"/>
+  <text class="t" x="600" y="432">Käyttäjähallinta</text>
+  <text class="s" x="600" y="456">käyttäjien tunnistus</text>
+  <text class="s" x="600" y="475">ja käyttöoikeudet</text>
+
+  <!-- external actors -->
+  <rect class="ext" x="770" y="85" width="200" height="62" rx="8"/>
+  <text class="t" x="870" y="112">EKG-laite</text>
+  <text class="s" x="870" y="133">EKG-tallenne</text>
+
+  <rect class="ext" x="770" y="160" width="200" height="62" rx="8"/>
+  <text class="t" x="870" y="187">Asiakkaan</text>
+  <text class="s" x="870" y="208">järjestelmä (esim. EHR)</text>
+
+  <rect class="ext" x="770" y="735" width="200" height="72" rx="8"/>
+  <text class="t" x="870" y="764">Terveydenhuollon</text>
+  <text class="s" x="870" y="786">ammattilainen</text>
+
+  <!-- main data flow -->
+  <path class="flow" d="M770,116 H472"/>
+  <text class="lbl" x="560" y="108">tallenne</text>
+  <circle class="num" cx="745" cy="116" r="10"/><text class="numt" x="745" y="120">1</text>
+
+  <path class="flow" d="M290,205 V253"/>
+  <circle class="num" cx="310" cy="229" r="10"/><text class="numt" x="310" y="233">2</text>
+
+  <path class="flow" d="M290,520 V570"/>
+  <text class="lbl" x="325" y="550">mittaukset ja löydökset</text>
+  <circle class="num" cx="310" cy="545" r="10"/><text class="numt" x="310" y="549">3</text>
+
+  <path class="flow" d="M250,690 V723"/>
+  <text class="lbl" x="215" y="711" text-anchor="end">tulokset</text>
+  <circle class="num" cx="230" cy="700" r="10"/><text class="numt" x="230" y="704">4</text>
+  <path class="flow" d="M330,725 V692"/>
+  <text class="lbl" x="345" y="705">muokkaukset ja hyväksyntä</text>
+
+  <path class="flow" d="M770,770 H472" style="marker-start:url(#a)"/>
+  <text class="lbl" x="490" y="792">tarkastelee, muokkaa, hyväksyy</text>
+  <circle class="num" cx="700" cy="770" r="10"/><text class="numt" x="700" y="774">5</text>
+
+  <!-- approved results back out through the API -->
+  <path class="flow" d="M110,631 H70 V180 H108"/>
+  <text class="lbl" transform="translate(62,470) rotate(-90)" text-anchor="middle">hyväksytyt tulokset</text>
+  <circle class="num" cx="70" cy="560" r="10"/><text class="numt" x="70" y="564">6</text>
+  <path class="flow" d="M470,191 H768"/>
+  <text class="lbl" x="560" y="183">tulokset</text>
+
+  <!-- access control -->
+  <path class="ctrl" d="M600,395 V240 H430 V207" />
+  <path class="ctrl" d="M600,495 V745 H472"/>
+  <text class="lbl" x="610" y="330" fill="#6B7A8F">tunnistus ja</text>
+  <text class="lbl" x="610" y="346" fill="#6B7A8F">käyttöoikeudet</text>
+
+  <!-- legend -->
+  <line x1="40" y1="862" x2="80" y2="862" stroke="#1F3B63" stroke-width="2" marker-end="url(#a)"/>
+  <text class="lbl" x="88" y="866">tiedon kulku (numerot: järjestys)</text>
+  <line x1="330" y1="862" x2="370" y2="862" stroke="#6B7A8F" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#g)"/>
+  <text class="lbl" x="378" y="866">pääsynhallinta</text>
+  <rect x="510" y="853" width="34" height="18" rx="4" class="ext"/>
+  <text class="lbl" x="552" y="866">laitteen ulkopuolinen osapuoli</text>
+</svg>
